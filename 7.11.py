@@ -9,7 +9,6 @@ model = keras.models.Sequential([
     keras.layers.Dense(4, activation='sigmoid'),
     keras.layers.Dense(1, activation='sigmoid'),
 ])
-z
 optimizer = keras.optimizers.SGD(learning_rate=5.0)
 model.compile(optimizer=optimizer, loss='mse')
 
@@ -24,3 +23,4 @@ domain = np.linspace(0, 1, 100).reshape(-1, 1)
 y_hat = model.predict(domain)
 plt.scatter(df['x'], df['y'])
 plt.scatter(domain, y_hat, color='r')
+plt.show()
